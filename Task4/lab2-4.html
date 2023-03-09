@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Смирнов Никита</title>
+</head>
+<body>
+<script>
+    "use strict";
+    const createATable = (startPoint = 1, endPoint = 100, n = 14) => {
+        document.write("<table>");
+        let a = startPoint;
+        let b = endPoint;
+        let resolves = {};
+
+        for (let i = 1; i < n; i++) {
+            resolves[i * (i + 1) / 2] = i;
+        }
+
+        document.write("<tr>");
+        for (; a <= b; a++) {
+            if (a in resolves) {
+                document.write(`<td class="redColor">`);
+            } else {
+                document.write(`<td>`);
+            }
+
+            document.write(`${a}</td>`);
+                
+            if(!(a % 10) && a) {
+                document.write("</tr><tr>");
+            }
+        }
+
+        document.write("</table>");
+    }
+
+    createATable(1, 100)
+
+</script>
+</body>
+</html>

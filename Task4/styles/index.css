@@ -1,0 +1,11 @@
+table {
+    border: 1px solid #000;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+td {
+    padding: 5px;
+    border: 1px solid #000;
+}
+.redColor {
+    color: red;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Смирнов Никита</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    const lang = prompt("Введите сокращенную форму языка", "");
+    let message = "";
+
+    if (lang === "ru") {
+        message = "русский";
+    } else if (lang === "en") {
+        message = "английский";
+    } else if (lang === "fr") {
+        message = "французский";
+    } else if (lang === "de") {
+        message = "немецкий";
+    } else {
+        message = "Язык неизвестен";
+    }
+
+    document.write(`<p style='text-align:center'>${message}</p>`);
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Смирнов Никита</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let promptMessage = "Введите значение x"
+    let x = null;
+    
+    while (!x) {
+        try {
+            x = prompt(promptMessage, "");
+            if (!isFinite(x) || x == null || x === "") {
+                throw new Error("Число не валидно");
+            }
+        } catch (e) {
+            alert(e.message);
+            x = null;
+        }
+    }
+
+    x = Number(x);
+    let y;
+
+    switch (true) {
+        case (x >= 8 && x !== 10):
+            y = Math.sqrt(x + 1)
+            break;
+        case (x > 0 && x < 8):
+            y = 0.6 * x;
+            break;
+        default:
+            y = Math.log10(Math.abs(x)) + 3;
+            break;
+    }
+
+
+    document.write(`<p style='text-align:center'><b>Y = </b>${y}</p>`);
+    document.write("<img src='./images/15image.png'/>");
+</script>
+</body>
+</html>
